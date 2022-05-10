@@ -1,0 +1,71 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "BaseLoader",
+"language": "GDScript",
+"path": "res://autoloads/assets/BaseLoader.gd"
+}, {
+"base": "Node",
+"class": "Chatter",
+"language": "GDScript",
+"path": "res://scripts/DialoguePresenter.gd"
+}, {
+"base": "Node",
+"class": "Choice",
+"language": "GDScript",
+"path": "res://scripts/OptionPresenter.gd"
+}, {
+"base": "Resource",
+"class": "DialogueResource",
+"language": "GDScript",
+"path": "res://addons/dialogue_manager/dialogue_resource.gd"
+}, {
+"base": "Node",
+"class": "Playback",
+"language": "GDScript",
+"path": "res://scripts/Playback.gd"
+} ]
+_global_script_class_icons={
+"BaseLoader": "",
+"Chatter": "",
+"Choice": "",
+"DialogueResource": "",
+"Playback": ""
+}
+
+[application]
+
+config/name="Qwaxl Framework"
+config/icon="res://icon.png"
+
+[autoload]
+
+Msg="*res://autoloads/Msg.gd"
+Noizy="*res://autoloads/Noizy.tscn"
+SimpleState="*res://autoloads/SimpleState.gd"
+Sleeper="*res://autoloads/Sleeper.gd"
+TestAutoload="*res://TestAutoload.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Props="*res://autoloads/assets/Props.gd"
+Audio="*res://autoloads/assets/Audio.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

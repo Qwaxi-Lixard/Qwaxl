@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://autoloads/Noizy.gd" type="Script" id=1]
+
+[node name="Noizy" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 28.0 ],
+"_edit_vertical_guides_": [ 512.0, 256.0, 128.0, 384.0 ]
+}
+
+[node name="FX8" type="AudioStreamPlayer" parent="."]
+
+[node name="Main" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0
+
+[node name="Cross" type="AudioStreamPlayer" parent="."]
+
+[node name="FX1" type="AudioStreamPlayer" parent="."]
+
+[node name="FX2" type="AudioStreamPlayer" parent="."]
+
+[node name="FX3" type="AudioStreamPlayer" parent="."]
+
+[node name="FX4" type="AudioStreamPlayer" parent="."]
+
+[node name="FX5" type="AudioStreamPlayer" parent="."]
+
+[node name="FX6" type="AudioStreamPlayer" parent="."]
+
+[node name="FX7" type="AudioStreamPlayer" parent="."]
+
+[node name="Tween" type="Tween" parent="."]

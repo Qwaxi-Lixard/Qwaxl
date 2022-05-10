@@ -1,0 +1,86 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+syntax_version = 2
+raw_text = "~ intro
+Hello... [do cast(\"a\", \"b\")][wait=3]World! [do cast(\"a\", \"c\")][wait=3]Goodbye... [do cast(\"a\", \"d\")][wait=3]World!
+do hello_wait_world()
+Hello!!!!!"
+errors = [  ]
+titles = {
+"intro": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "intro",
+"type": "title"
+},
+"1": {
+"character": "",
+"inline_mutations": [ [ 9, {
+"args": [ [ {
+"type": "string",
+"value": "a"
+} ], [ {
+"type": "string",
+"value": "b"
+} ] ],
+"function": "cast"
+} ], [ 16, {
+"args": [ [ {
+"type": "string",
+"value": "a"
+} ], [ {
+"type": "string",
+"value": "c"
+} ] ],
+"function": "cast"
+} ], [ 27, {
+"args": [ [ {
+"type": "string",
+"value": "a"
+} ], [ {
+"type": "string",
+"value": "d"
+} ] ],
+"function": "cast"
+} ] ],
+"next_id": "2",
+"pauses": {
+9: 3.0,
+16: 3.0,
+27: 3.0
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Hello... World! Goodbye... World!",
+"time": null,
+"translation_key": "Hello... World! Goodbye... World!",
+"type": "dialogue"
+},
+"2": {
+"mutation": {
+"args": [  ],
+"function": "hello_wait_world"
+},
+"next_id": "3",
+"type": "mutation"
+},
+"3": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "Hello!!!!!",
+"time": null,
+"translation_key": "Hello!!!!!",
+"type": "dialogue"
+}
+}
